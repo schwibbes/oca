@@ -1,0 +1,16 @@
+{
+	"cmd": ["javac", "$file"],
+	"file_regex": "^(...*?):([0-9]*):?([0-9]*)",
+	"path": "C:\\Program Files\\Java\\jdk1.8.0_40\\bin",
+	"selector": "source.java",
+	"encoding": "cp850",
+	 "variants": [
+        { "cmd": ["del", "${file}/bin/A.class"],
+          "name": "Clean Java"
+        },
+        { "cmd": ["java", "$file_base_name"],
+          "working_dir": "$file_path",
+          "name": "Run"
+        }
+    ]
+}
